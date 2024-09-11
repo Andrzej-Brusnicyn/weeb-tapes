@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+@font-face {
+    font-family: commodore;
+    src: url(C64_Pro_Mono-STYLE.ttf);
+}
+@font-face {
+    font-family: commodoreFlat;
+    src: url(Commodore_Angled_v1.2.ttf);
+}

@@ -1,0 +1,9 @@
+{
+  "_hash": "iW93mknOXi",
+  "project": {
+    "rootDir": "/opt/app/0.0.0.0"
+  },
+  "versions": {
+    "nuxt": "3.12.4"
+  }
+}
