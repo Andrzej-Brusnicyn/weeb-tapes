@@ -1,5 +1,6 @@
 <template>
   <div class="bg-[#D7CEBD] flex flex-col justify-center">
+    <NuxtLink to="/blogEdit">To blog edit</NuxtLink>
 
     <form @submit.prevent="saveTape" class="max-w-sm mx-auto">
       <div class="mb-5">
