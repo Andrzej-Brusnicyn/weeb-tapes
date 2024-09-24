@@ -124,7 +124,7 @@ async function saveTape() {
 
 const products = ref([]);
 async function fetchTapes() {
-  const response = await fetch('http://api.weeb-tapes.de/api/v1/tapes');
+  const response = await fetch('http://api.weeb-tapes.de/api/v1/alltapes');
     const data = await response.json();
     products.value = data.data;
 }

@@ -53,6 +53,9 @@ async function logout() {
           <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
             <NuxtLink to="/admin" class='hover:text-[#007bff] text-[#A09D9C] block font-semibold text-[15px]'>Admin</NuxtLink>
           </li>
+          <li class='max-lg:border-b border-gray-300 max-lg:py-3 px-3'>
+            <NuxtLink to="/cart" class='hover:text-[#007bff] text-[#A09D9C] block font-semibold text-[15px]'>Cart</NuxtLink>
+          </li>
         </ul>
       </div>
 

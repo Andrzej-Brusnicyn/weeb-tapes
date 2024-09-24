@@ -92,6 +92,12 @@ const _inlineRuntimeConfig = {
       "/admin": {
         "ssr": false
       },
+      "/blogEdit": {
+        "ssr": false
+      },
+      "/cart": {
+        "ssr": false
+      },
       "/_nuxt/builds/meta/**": {
         "headers": {
           "cache-control": "public, max-age=31536000, immutable"

@@ -23,6 +23,7 @@ class TapeResource extends JsonResource
             'stock' => $this->stock,
             'url' => $this->url,
             'genre' => $this->genre,
+            'updated_at' => $this->updated_at,
         ];
     }
 }

@@ -22,7 +22,7 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const { data } = await useFetch('http://api.weeb-tapes.de/api/v1/tapes')
+const { data } = await useFetch('http://api.weeb-tapes.de/api/v1/alltapes')
 const products = data.value.data
 
 const cards = ref(products.slice(0, 11))

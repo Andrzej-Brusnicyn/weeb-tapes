@@ -10,6 +10,8 @@ use App\Http\Controllers\Controller;
 use App\Interfaces\TapeRepositoryInterface;
 use App\Http\Requests\StoreTapeRequest;
 use App\Http\Requests\UpdateTapeRequest;
+use App\Filters\TapeFilter;
+use App\Http\Requests\FilterRequest;
 
 class TapesController extends Controller
 {
@@ -20,11 +22,20 @@ class TapesController extends Controller
         $this->tapeRepositoryInterface = $tapeRepositoryInterface;
     }
 
-    public function index()
+    public function index(TapeFilter $filter)
     {
-        $tapes = $this->tapeRepositoryInterface->getAll();
+        $tapes = Tape::filter($filter)->paginate(8);
+
         return TapeResource::collection($tapes);
     }
+
+    public function indexAll()
+    {
+        $tapes = Tape::all();
+
+        return TapeResource::collection($tapes);
+    }
+
 
     public function store(StoreTapeRequest $request)
     {

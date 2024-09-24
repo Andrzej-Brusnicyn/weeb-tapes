@@ -20,5 +20,7 @@ export default defineNuxtConfig({
   },
   routeRules: {
     "/admin": { ssr: false },
+    "/blogEdit": { ssr: false },
+    "/cart": { ssr: false },
   },
 })

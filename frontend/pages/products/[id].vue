@@ -4,6 +4,20 @@
   console.log(uri)
   const { data } = await useFetch(uri)
   const product = data.value.data
+
+  async function addCart() {
+    const token = localStorage.getItem('authToken')
+    const response = await fetch('http://api.weeb-tapes.de/api/cart/add', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${token}`,
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({ tape_id: id })
+    })
+    alert('Ты купил говно, лох')
+  }
 </script>
 
 <template>
@@ -56,7 +70,7 @@
             </div>
           </div>
 
-          <button type="button" class="w-full mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md">Add to cart</button>
+          <button type="button" @click="addCart" class="w-full mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded-md">Add to cart</button>
 
           <div class="mt-8">
             <h3 class="text-xl font-bold text-gray-800">Reviews(10)</h3>
